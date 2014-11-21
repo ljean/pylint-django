@@ -84,3 +84,9 @@ _add_transform('django.db.models.fields',
 _add_transform('django.db.models.fields.files', 'FileField', 'ImageField')
 _add_transform('django.db.models.fields.related', 'ManyToManyField')
 _add_transform('django.utils.translation', 'ugettext_lazy')
+
+try:
+    _add_transform('floppyforms', 'Form')
+    _add_transform('floppyforms', 'ModelForm')
+except ImportError:
+    pass
